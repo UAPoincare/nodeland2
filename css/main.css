@@ -28,7 +28,7 @@ h4 {
 }
 header {
 	width: 100%;
-	background-image: url(../img/header-fon.png);
+	background-image: url(../img/header-fon.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	background-size: cover;
@@ -197,7 +197,7 @@ header {
 	color: #fff;
 	padding-top: 111px;
 }
-.product-carousel h4 {
+.about-products-1__title {
 	font-size: 30px;
 	font-weight: 700;
 	color: #fff;
@@ -213,5 +213,20 @@ header {
 	font-size: 22px;
 	line-height: 33px;
 	list-style-type: none;
+	padding-left: 10px;
 }
-
+.product-carousel ul li img {
+	margin-right: 10px;
+}
+.product-carousel-wrap {
+	width: 100%;
+}
+.about-products-2 {
+	padding-left: 116px;
+	padding-right: 100px;
+}
+.about-products-2__title {
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+}
