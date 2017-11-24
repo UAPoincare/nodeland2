@@ -1,77 +1,92 @@
 
 $(function (){
 
-    "use strict";
+	"use strict";
 
-    var wind = $(window);
+	var wind = $(window);
 
-    //smooth scroll
-    $('.navbar-nav').singlePageNav({
-        speed:1000,
-        currentClass:'active',
-        offset:80
-    });
+	//smooth scroll
+	$('.navbar-nav').singlePageNav({
+		speed:1000,
+		currentClass:'active',
+		offset:80
+	});
 
 
-    // navbar scrolling background
-    wind.on("scroll",function () {
+	// navbar scrolling background
+	wind.on("scroll",function () {
 
-        var bodyScroll = $(window).scrollTop(),
-            navbar = $(".navbar-default");
+		var bodyScroll = $(window).scrollTop(),
+			navbar = $(".navbar-default");
 
-        if(bodyScroll > 300){
+		if(bodyScroll > 300){
 
-            navbar.addClass("nav-scroll");
+			navbar.addClass("nav-scroll");
 
-        }else{
+		}else{
 
-            navbar.removeClass("nav-scroll");
-        }
-    });
+			navbar.removeClass("nav-scroll");
+		}
+	});
 
 });
+$(document).ready(function() {
+    var carousel = $("#carousel");
+    carousel.owlCarousel({
+        items: 3,
+        rewindNav: true,
+    });
+    $('#js-prev').click(function () {
+        carousel.trigger('owl.prev');
+        return false;
+        });
 
+    $('#js-next').click(function () {
+        carousel.trigger('owl.next');
+
+        return false;
+    });
+} );
 $(document).ready(function() {
 
 	$("#product").mouseenter(function(){
-        $(this).addClass('hover-state');
-    }).mouseleave(function(){
-        $(this).removeClass('hover-state');
-    });
+		$(this).addClass('hover-state');
+	}).mouseleave(function(){
+		$(this).removeClass('hover-state');
+	});
 
-    $("#play-video.video").click(function(e){
-    	e.preventDefault();
+	$("#play-video.video").click(function(e){
+		e.preventDefault();
 
-        $('#product').addClass('is-transparent');
+		$('#product').addClass('is-transparent');
 
-        player = new YT.Player('player', {
-            width : '100%',
-            height : '100%',
-            videoId : 'hdn2pFOKK8o',
-            playerVars: { 'autoplay': 1 },
-            events : {
-                'onReady' : onPlayerReady,
-                'onStateChange' : onPlayerStateChange
-            }
-        });
-    });
+		player = new YT.Player('player', {
+			width : '100%',
+			height : '100%',
+			videoId : 'hdn2pFOKK8o',
+			playerVars: { 'autoplay': 1 },
+			events : {
+				'onReady' : onPlayerReady,
+				'onStateChange' : onPlayerStateChange
+			}
+		});
+	});
 
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+	var tag = document.createElement('script');
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    var player;
-    function onPlayerReady(event) {
-        //event.target.playVideo();
-    }
-    function onPlayerStateChange(event) {
-        if(event.data == YT.PlayerState.ENDED) {
-            player.destroy();
-            $('#product').removeClass('is-transparent');
-        }
-    }
-
+	var player;
+	function onPlayerReady(event) {
+		//event.target.playVideo();
+	}
+	function onPlayerStateChange(event) {
+		if(event.data == YT.PlayerState.ENDED) {
+			player.destroy();
+			$('#product').removeClass('is-transparent');
+		}
+	}
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
