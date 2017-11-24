@@ -1,0 +1,217 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+h1 {
+	font-weight: 700;
+	font-size: 56px;
+	color: #fff;
+	line-height: 1.23;
+}
+h3 {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 40px;
+	color: #fff;
+}
+h2 {
+	font-weight: 600;
+	font-size: 40px;
+	color: #000;
+}
+h4 {
+	font-weight: 700;
+	font-size: 22px;
+	color: #000;
+}
+.hidden {
+	display: none;
+}
+header {
+	width: 100%;
+	background-image: url(../img/header-fon.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: cover;
+	height: 850px;
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+.header_wrapper {
+	background-color: rgba(0, 0, 0, 0.69);
+	height: 100%;
+	position: relative;
+}
+.bg-light {
+	background-color: transparent !important;
+}
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+	color: #51b6fe;
+	font-weight: 600;
+	font-size: 17px;
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+	color: #51b6fe;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: #fff;
+	font-weight: 600;
+	font-size: 17px;
+	letter-spacing: -0.5px;
+}
+.navbar-brand {
+	padding:22px 0 0 24px;
+	margin-right: 100px;
+}
+.navbar-nav {
+	padding-top: 27px;
+}
+.nav-item {
+	margin-right: 10px;
+}
+.dropdown-menu {
+	min-width: 20px;
+}
+.nav-scroll{
+	background: #111;
+	height: 80px;
+	line-height: 80px;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: all .5s;
+	z-index: 9999;
+}
+.presentation {
+	margin: 196px 0 0 112px;
+	width: 438px;
+}
+.presentation__header {
+	margin-bottom: 21px;
+}
+.infograph {
+	width: 88%;
+	height: 426px;
+	border-radius: 5px;
+	-webkit-backdrop-filter: blur(5.7px);
+	backdrop-filter: blur(5.7px);
+	background-color: rgba(117, 117, 117, 0.2);
+	margin-top: 131px;
+}
+.arrow-down {
+	text-align: center;
+	margin-top: 60px;
+}
+.products {
+	margin-bottom: 64px;
+}
+.products h2 {
+	text-align: center;
+	padding: 60px 0 40px 0;
+}
+.products p {
+	margin:0 5px 0 10px;
+	font-size: 22px;
+	line-height: 33px;
+	font-weight: 300;
+}
+.section_video {
+	margin-top: 100px;
+	padding: 0;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: cover;
+}
+.section_video.is-transparent {
+	background-image: none !important;
+	background-color: #000;
+}
+.section_video.is-transparent .icon-play {
+	visibility: hidden;
+	opacity: 0;
+}
+
+#play-video {
+	position: relative;
+	display: block;
+	height: 0;
+	padding-bottom: 56.5%;
+}
+#play-video.hover-state {
+	cursor: pointer;
+}
+#play-video.hover-state .icon-play {
+	opacity: 0.7;
+}
+#play-video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.icon-play {
+	position: absolute;
+	top: 48%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -30%);
+	-ms-transform: translate(-50%, -30%);
+	transform: translate(-50%, -30%);
+	background-image: url("../img/icons.png");
+	width: 90px;
+	height: 90px;
+	background-position: 0px 0px;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+.products__properties__list {
+	list-style-type: none;
+	margin-top: 100px;
+	justify-content: space-between;
+	text-align: center;
+}
+.products__properties__list_item {
+	max-width: 195px;
+}
+.products__properties__list_item img {
+	margin-bottom: 30px;
+}
+.products__properties__list_item h4 {
+	margin-bottom: 30px;
+}
+.products__properties__list_item p {
+	font-weight: 300;
+	font-size: 18px;
+}
+.product-carousel {
+	background-color: #252525;
+	min-height: 300px;
+	-webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+	color: #fff;
+}
+.product-carousel h2 {
+	text-align: center;
+	color: #fff;
+	padding-top: 111px;
+}
+.product-carousel h4 {
+	font-size: 30px;
+	font-weight: 700;
+	color: #fff;
+	margin-top: 160px;
+}
+.product-carousel p {
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 33px;
+}
+.product-carousel ul {
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 33px;
+	list-style-type: none;
+}
+
