@@ -26,65 +26,62 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css" />
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="libs/jquery-ui/jquery-ui.min.css" />
 	<link rel="stylesheet" href="css/fonts.css" />
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="css/media.css" />
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+			<img src="img/logo-node.svg" width="70" height="53" alt="logo" class="logo svg">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto" id="top-menu">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Node <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#products">Product</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#team">Team</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#roadmap">Roadmap</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#token">Token</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Whitepaper</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Privacy policy</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Terms and conditions</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					ENG
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<a class="dropdown-item" href="#">RU</a>
+						<a class="dropdown-item" href="#">ES</a>
+						<a class="dropdown-item" href="#">JAP</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</nav>
 	<header>
 		<div class="header_wrapper">
 			<div class="container-fluid">
-				<div class="row">
-					<div class="col-lg-12">
-						<nav class="navbar navbar-expand-lg navbar-light bg-light">
-							<a class="navbar-brand" href="#">
-								<img src="img/lofo-node.png" width="70" height="53" alt="logo">
-							</a>
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-
-							<div class="collapse navbar-collapse" id="navbarSupportedContent">
-								<ul class="navbar-nav ml-auto">
-									<li class="nav-item active">
-										<a class="nav-link" href="#">Node <span class="sr-only">(current)</span></a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Product</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Team</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Roadmap</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Token</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Whitepaper</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Privacy policy</a>
-									</li>
-									<li class="nav-item">
-										<a class="nav-link" href="#">Terms and conditions</a>
-									</li>
-									<li class="nav-item dropdown">
-										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-										ENG
-										</a>
-										<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-											<a class="dropdown-item" href="#">RU</a>
-											<a class="dropdown-item" href="#">ES</a>
-											<a class="dropdown-item" href="#">JAP</a>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</nav>
-					</div>
-				</div>
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="presentation">
@@ -93,7 +90,70 @@
 						</div>
 					</div>
 					<div class="col-lg-6">
-						<div class="infograph"></div>
+						<div class="token-distribution">
+							<h3 class="token-distribution__title">Node Token Distribution</h3>
+							<div class="token-distribution__infograph">
+								<div class="token-distribution__infograph__title d-flex">
+									<div class="token-distribution__infograph__total-distr">
+										<h3 class="token-distribution__infograph__total-distr__title">Total distribution</h3>
+									</div>
+									<div class="token-distribution__infograph__cur-period d-flex">
+										<p class="token-distribution__infograph__cur-period__detailed">Current period</p>
+										<div class="token-distribution__infograph__cur-period__current-day js-timer-day">146</div>
+										<div class="token-distribution__infograph__cur-period__line">/</div>
+										<div class="token-distribution__infograph__cur-period__end-day">350</div>
+									</div>
+
+								</div>
+								<div class="progressbar-wrap">
+									<div id="progressbar" class="progressbar">
+										<div class="progressbar-in"></div>
+										<div class="progressbar-line"></div>
+										<p class="progressbar-number">590000000 EOS</p>
+									</div>
+								</div>
+								<div class="d-flex">
+									<div class="eos">0 Eos</div>
+									<div class="node">1,000,000,000 NODE</div>
+								</div>
+								<h3 class="current-distribution-title">Current distribution</h3>
+								<div class="current-distribution-items d-flex">
+									<div class="current-distribution-items__node">
+										2 000 000 <span>NODE</span>
+									</div>
+										<div class="current-distribution-items__eth">
+											103 <span>ETH Received</span>
+										</div>
+								</div>
+								<div class="current-distr-ends">
+									Current distribution ends in
+								</div>
+								<div class="timer">
+									<div class="timer__body">
+									  <div class="timer__cols js-timer d-flex">
+										<div class="timer__col">
+										  <div class="timer__item js-timer-days ">17</div>
+										  <div class="timer__caption">days</div>
+										</div>
+										<div class="timer__col">
+										  <div class="timer__item js-timer-hour">20</div>
+										  <div class="timer__caption">hours</div>
+										</div>
+										<div class="timer__col">
+										  <div class="timer__item js-timer-min">05</div>
+										  <div class="timer__caption">MINS</div>
+										</div>
+									  </div>
+									  <div class="timer-rectangle timer-rectangle1"></div>
+									  <div class="timer-rectangle timer-rectangle2"></div>
+									  <div class="timer-rectangle timer-rectangle3"></div>
+									  <div class="timer-rectangle timer-rectangle4"></div>
+									  <div class="timer-rectangle timer-rectangle5"></div>
+									  <div class="timer-rectangle timer-rectangle6"></div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="row">
@@ -111,7 +171,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<h2>What is Node</h2>
-					<p>High-tech startup creating new benchmark of wireless energy transmission for any device inside/outside homes and offices. In the consumer sector this technology is actively used to charge smartphones, tablets, wearable devices and other electronics. Node tries to develope it to a wide range of applications in consumer electronics, automotive, medical and many other industries. Our investors get an opportunity not only to increase their capital, but also to become the first owners of such devices</p>
+					<p>High-tech startup creating new benchmark of wireless energy transmission for any device inside/outside homes and offices. In the consumer sector this technology is actively used to charge smartphones, tablets, wearable devices and other electronics. Node aims to develop a wide range of applications in consumer electronics, automotive, medical and many other industries. Our investors get an opportunity not only to increase their capital, but also to become the first owners of such devices</p>
 					<div class=" section_video" id="product_video" style="background-image: url(img/eon-115.png);">
 						<a href="#" id="play-video" class="video">
 							<img src="img/play-icon.png" alt="icon-play" class="icon-play">
@@ -126,7 +186,7 @@
 										<div class="products__properties__list_item">
 											<img src="img/group-copy-4.png" alt="img">
 											<h4>Intelligent</h4>
-											<p>Transfer energy at the distance to many devices with any power at the same time</p>
+											<p>Remote and simultaneous transfer of energy to many devices with any power</p>
 										</div>
 									</div>
 									<div class="col-lg-2">
@@ -232,8 +292,8 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<h3 class="team__title">NODE TEAM</h3>
-						<p class="team__text">A team of experts dedicated to driving the technology’s next level</p>
+						<h3 class="team__title">Node Team</h3>
+						<p class="team__text">A team of experts dedicated to drive the technology to the next level</p>
 					</div>
 					<div class="col-lg-12">
 						<div class="carousel-wrap">
@@ -309,6 +369,132 @@
 			</div>
 		</div>
 	</section>
+	<section id="roadmap">
+		<div class="roadmap-wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="roadmap__title">ROADMAP</h2>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<section>
+		<div class="events">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="events__title">SEE YOU ALL OVER THE WORLD</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="events__items-left">
+							<p class="events__items-left__date">November 29</p>
+							<p class="events__items-left__theme"> RUSSIAN STARTUPS <br>GO GLOBAL 2017</p>
+							<p class="events__items-left__location">Moscow, Russia</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 offset-lg-6">
+						<div class="events__items-right">
+							<p class="events__items-right__date">November 30</p>
+							<p class="events__items-right__theme">Blockchain and <br>
+							Bitcoin Conference</p>
+							<p class="events__items-right__location">Limassol, Cyprus</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="events__items-left">
+							<p class="events__items-left__date">December 4-5</p>
+							<p class="events__items-left__theme">Moontec 17</p>
+							<p class="events__items-left__location">Tallinn, Estonia</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 offset-lg-6">
+						<div class="events__items-right">
+							<p class="events__items-right__date">December 7</p>
+							<p class="events__items-right__theme">Blockchain & <br> Bitcoin Conference</p>
+							<p class="events__items-right__location">Malta</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="events__items-left">
+							<p class="events__items-left__date">December 8</p>
+							<p class="events__items-left__theme">Cryptospace <br> Conference Moscow</p>
+							<p class="events__items-left__location">Tallinn, Estonia</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 offset-lg-6">
+						<div class="events__items-right">
+							<p class="events__items-right__date">December 15</p>
+							<p class="events__items-right__theme">Blockchain <br> Conference Kyiv</p>
+							<p class="events__items-right__location">Kiev, Ukraine</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="events__items-left">
+							<p class="events__items-left__date">December 18</p>
+							<p class="events__items-left__theme">Blockchain: <br>
+							трансформация будущего </p>
+							<p class="events__items-left__location">Tallinn, Estonia</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 offset-lg-6">
+						<div class="events__items-right">
+							<p class="events__items-right__date">December 18</p>
+							<p class="events__items-right__theme">Bazar Tech <br> Convention</p>
+							<p class="events__items-right__location">Sochi, Russia</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="events__vertical-line"></div>
+			<div class="events__horizontal-line1"></div>
+			<div class="events__horizontal-line2"></div>
+			<div class="events__horizontal-line3"></div>
+			<div class="events__horizontal-line4"></div>
+			<div class="events__horizontal-line5"></div>
+			<div class="events__horizontal-line6"></div>
+			<div class="events__horizontal-line7"></div>
+			<div class="events__horizontal-line8"></div>
+		</div>
+	</section>
+	<section id="token" class="token">
+		<div class="token-wrap">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<h2 class="token__title">TOKEN</h2>
+						<p class="token__info">The NODE token gives you a unique opportunity to invest in a revolutionary technological product -  wireless transmission devices for both private and commercial use. The current round of the funds raising is aimed at financing the Node devices production, marketing and sales.</p>
+						<p class="token__info">The current stage of development is the best time to invest:</p>
+						<ul class="token__info_properties">
+							<li><img src="img/checkmark.png" alt="checkmark"><div>Smoothed risks related to the product's performance</div></li>
+							<li><img src="img/checkmark.png" alt="checkmark"><div>Opportunity that is usually only available to business angels and venture capitalists.</div></li>
+							<li><img src="img/checkmark.png" alt="checkmark"><div>R&D phase, prototype production and testing are successfully completed</div></li>
+							<li><img src="img/checkmark.png" alt="checkmark"><div>All Tests of prototypes demonstrate full compliance with the declared characteristics</div></li>
+							<li><img src="img/checkmark.png" alt="checkmark"><div>Maximum potential for the increase in investment  </div></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<div class="hidden"></div>
 	<!-- Mandatory for Responsive Bootstrap Toolkit to operate -->
 	<div class="device-xs visible-xs"></div>
@@ -326,6 +512,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<script src="libs/owl-carousel/owl.carousel.min.js"></script>
+	<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="js/countTo.js"></script>
+	<script src="js/jquery.countdown.min.js"></script>
 	<script src="js/common.js"></script>
 	<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
 	<!-- Google Analytics counter --><!-- /Google Analytics counter -->

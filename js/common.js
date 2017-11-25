@@ -1,52 +1,57 @@
+  // $( function() {
+  //   var progressbar = $( "#progressbar" ),
+  //     progressLabel = $( ".progress-label" );
 
-$(function (){
+  //   progressbar.progressbar({
+  //     value: false,
+  //     change: function() {
+  //       progressLabel.text( progressbar.progressbar( "value" ) + "%" );
+  //     },
+  //     complete: function() {
+  //       progressLabel.text( "Complete!" );
+  //     }
+  //   });
 
-	"use strict";
+  //   function progress() {
+  //     var val = progressbar.progressbar( "value" ) || 0;
 
-	var wind = $(window);
+  //     progressbar.progressbar( "value", val + 2 );
 
-	//smooth scroll
-	$('.navbar-nav').singlePageNav({
-		speed:1000,
-		currentClass:'active',
-		offset:80
-	});
+  //     if ( val < 99 ) {
+  //       setTimeout( progress, 80 );
+  //     }
+  //   }
+
+  //   setTimeout( progress, 2000 );
+  // } );
 
 
-	// navbar scrolling background
-	wind.on("scroll",function () {
-
-		var bodyScroll = $(window).scrollTop(),
-			navbar = $(".navbar-default");
-
-		if(bodyScroll > 300){
-
-			navbar.addClass("nav-scroll");
-
-		}else{
-
-			navbar.removeClass("nav-scroll");
-		}
-	});
-
+$(window).scroll(function() {
+    if($(this).scrollTop()>800) {
+        $( ".navbar" ).addClass("sticky-top");
+    } else {
+        $( ".navbar" ).removeClass("sticky-top");
+    }
 });
+
 $(document).ready(function() {
-    var carousel = $("#carousel");
-    carousel.owlCarousel({
-        items: 3,
-        rewindNav: true,
-    });
-    $('#js-prev').click(function () {
-        carousel.trigger('owl.prev');
-        return false;
-        });
+	var carousel = $("#carousel");
+	carousel.owlCarousel({
+		items: 3,
+		rewindNav: true,
+	});
+	$('#js-prev').click(function () {
+		carousel.trigger('owl.prev');
+		return false;
+		});
 
-    $('#js-next').click(function () {
-        carousel.trigger('owl.next');
+	$('#js-next').click(function () {
+		carousel.trigger('owl.next');
 
-        return false;
-    });
+		return false;
+	});
 } );
+
 $(document).ready(function() {
 
 	$("#product").mouseenter(function(){
@@ -87,6 +92,30 @@ $(document).ready(function() {
 			$('#product').removeClass('is-transparent');
 		}
 	}
+
+	$(".js-timer").countdown('2017/12/15 00:00:00', function(event) {
+		$('.js-timer-days').text(event.strftime('%D'));
+		$('.js-timer-hour').text(event.strftime('%H'));
+		$('.js-timer-min').text(event.strftime('%M'));
+	});
+
+
+
+ $('.js-timer-day')
+
+   var count = 146; // произвольное число
+   function tick() {
+
+       count += 1;
+       document.cookie = count;
+
+       $('.js-timer-day').text(count);
+       $('.js-timer-sum').text(count);
+
+       setTimeout(tick, 86400000); // рандом по времени обновления
+
+   }
+   tick();
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
